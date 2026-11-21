@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexus WebOS</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/apps.css">
+</head>
+<body>
+
+  <!-- Робочий стіл -->
+  <main id="desktop">
+
+    <!-- Іконки на робочому столі -->
+    <div class="desktop-icons">
+      <div class="desktop-icon" data-target="window-crypto">
+        <span class="icon-emoji">📈</span>
+        <span class="icon-title">CryptoEx</span>
+      </div>
+
+      <div class="desktop-icon" data-target="window-terminal">
+        <span class="icon-emoji">💻</span>
+        <span class="icon-title">Terminal</span>
+      </div>
+
+      <div class="desktop-icon" data-target="window-notes">
+        <span class="icon-emoji">📝</span>
+        <span class="icon-title">CyberNotes</span>
+      </div>
+
+      <div class="desktop-icon" data-target="window-settings">
+        <span class="icon-emoji">⚙️</span>
+        <span class="icon-title">Налаштування</span>
+      </div>
+    </div>
+
+    <!-- ВІКНО 1: Крипто-біржа -->
+    <section id="window-crypto" class="window" style="top: 80px; left: 160px;">
+      <header class="window-header">
+        <span class="window-title">📈 CryptoEx — Біржовий термінал</span>
+        <div class="window-controls">
+          <button class="btn-minimize" title="Згорнути">—</button>
+          <button class="btn-maximize" title="На весь екран">□</button>
+          <button class="btn-close" title="Закрити">✕</button>
+        </div>
+      </header>
+      <div class="window-body" id="crypto-app">
+        <p>Завантаження біржових даних...</p>
+      </div>
+    </section>
+
+    <!-- ВІКНО 2: Термінал -->
+    <section id="window-terminal" class="window hidden" style="top: 130px; left: 260px;">
+      <header class="window-header">
+        <span class="window-title">💻 Системний термінал</span>
+        <div class="window-controls">
+          <button class="btn-minimize" title="Згорнути">—</button>
+          <button class="btn-maximize" title="На весь екран">□</button>
+          <button class="btn-close" title="Закрити">✕</button>
+        </div>
+      </header>
+      <div class="window-body" id="terminal-app">
+        <p>NexusOS Terminal v1.0. Введіть <b>help</b> для списку команд.</p>
+      </div>
+    </section>
+
+    <!-- ВІКНО 3: Нотатник (Зона напарника) -->
+    <section id="window-notes" class="window hidden" style="top: 100px; left: 340px;">
+      <header class="window-header">
+        <span class="window-title">📝 CyberNotes — Блокнот</span>
+        <div class="window-controls">
+          <button class="btn-minimize" title="Згорнути">—</button>
+          <button class="btn-maximize" title="На весь екран">□</button>
+          <button class="btn-close" title="Закрити">✕</button>
+        </div>
+      </header>
+      <div class="window-body" id="notes-app">
+        <p>Тут буде верстка нотатника...</p>
+      </div>
+    </section>
+
+    <!-- ВІКНО 4: Налаштування (Зона напарника) -->
+    <section id="window-settings" class="window hidden" style="top: 150px; left: 420px;">
+      <header class="window-header">
+        <span class="window-title">⚙️ Налаштування системи</span>
+        <div class="window-controls">
+          <button class="btn-minimize" title="Згорнути">—</button>
+          <button class="btn-maximize" title="На весь екран">□</button>
+          <button class="btn-close" title="Закрити">✕</button>
+        </div>
+      </header>
+      <div class="window-body" id="settings-app">
+        <p>Тут буде вибір шпалер та кольорів теми...</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Нижня панель завдань (Taskbar) -->
+  <footer id="taskbar">
+    <div class="taskbar-left">
+      <button id="start-btn">⚡ NexusOS</button>
+    </div>
+    <div class="taskbar-center" id="taskbar-apps">
+      <!-- Сюди можна виводити активні вкладки -->
+    </div>
+    <div class="taskbar-right">
+      <span id="battery">🔋 100%</span>
+      <span id="clock">00:00:00</span>
+    </div>
+  </footer>
+
+  <!-- Підключення скриптів -->
+  <script src="js/core.js"></script>
+  <script src="js/crypto.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/notes.js"></script>
+  <script src="js/settings.js"></script>
+</body>
+</html>
